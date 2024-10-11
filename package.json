@@ -1,7 +1,7 @@
 {
-  "name": "ts-streamclient-base",
-  "version": "2.0.0",
-  "description": "typescript base lib",
+  "name": "ts-concurrency",
+  "version": "0.1.0",
+  "description": "typescript concurrency",
   "author": "xpwu",
   "dependencies": {
     "ts-xutils": "https://github.com/xpwu/ts-xutils.git#v0.1.2"
@@ -19,7 +19,7 @@
   "keywords": [
     "ts",
     "typescript",
-    "stream client",
+    "concurrency",
     "web"
   ],
   "license": "MIT",
@@ -29,7 +29,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/xpwu/ts-streamclient.git"
+    "url": "https://github.com/xpwu/ts-concurrency.git"
   },
   "jest": {
     "preset": "ts-jest",
