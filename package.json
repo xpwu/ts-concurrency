@@ -4,7 +4,7 @@
   "description": "typescript base lib",
   "author": "xpwu",
   "dependencies": {
-
+    "ts-xutils": "https://github.com/xpwu/ts-xutils.git#v0.1.2"
   },
   "devDependencies": {
     "@types/jest": "28.1.3",
