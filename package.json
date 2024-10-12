@@ -4,7 +4,7 @@
   "description": "typescript concurrency",
   "author": "xpwu",
   "dependencies": {
-    "ts-xutils": "https://github.com/xpwu/ts-xutils.git#v0.1.2"
+    "ts-xutils": "../ts-xutils"
   },
   "devDependencies": {
     "@types/jest": "28.1.3",

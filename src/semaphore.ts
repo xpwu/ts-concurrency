@@ -1,9 +1,11 @@
 import {queue} from "./queue"
+import {assert} from "ts-xutils"
+
 
 export class Semaphore {
 	acquiredSuspend: queue<() => void> = new queue
-	max: number
-	current: number = 0
+	public max: number
+	public current: number = 0
 
 	constructor(max: number) {
 		this.max = max > 1? max : 1
@@ -29,7 +31,7 @@ export class Semaphore {
 
 		// de() == nil
 		this.current -= 1
-		console.assert(this.current >= 0)
+		assert(this.current >= 0)
 	}
 
 	ReleaseAll(): void {

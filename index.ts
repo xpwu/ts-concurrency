@@ -5,5 +5,7 @@ export {Semaphore} from "./src/semaphore"
 
 export {Mutex} from "./src/mutex"
 
-export {withTimeout} from "./src/timeout"
+export {withTimeout, Timeout} from "./src/timeout"
+
+export {asyncExe} from "./src/asyncexe"
 
