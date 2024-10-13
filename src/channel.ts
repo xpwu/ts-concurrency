@@ -28,7 +28,7 @@ export class Channel<E> implements SendChannel<E>, ReceiveChannel<E> {
 	max: number
 	closed: ChannelClosed|null = null
 
-	constructor(max: number	) {
+	constructor(max: number = 0) {
 		this.max = max
 	}
 
