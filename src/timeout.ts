@@ -10,12 +10,15 @@ export class Timeout implements Error {
 }
 
 export async function withTimeout<R>(d: Duration, exe: ()=>Promise<R>): Promise<R|Timeout> {
+	let timer
 	let timePro = new Promise<Timeout>((resolve)=>{
-		setTimeout(()=>{
+		timer = setTimeout(()=>{
 			resolve(new Timeout(d))
 		}, d/Millisecond)
 	})
 
-	return await Promise.race([exe(), timePro])
+	let ret = await Promise.race([exe(), timePro])
+	clearTimeout(timer)
+	return ret
 }
 
