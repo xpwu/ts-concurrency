@@ -1,4 +1,4 @@
-import {Duration, Millisecond} from "ts-xutils"
+import {Duration, Millisecond} from "ts-x"
 
 export class Timeout implements Error {
 	message: string

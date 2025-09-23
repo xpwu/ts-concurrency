@@ -1,39 +1,44 @@
 {
   "name": "ts-concurrency",
-  "version": "0.2.0",
-  "description": "typescript concurrency",
+  "version": "0.3.0",
+  "description": "typescript concurrency: channel, mutex, semaphore and so on",
   "author": "xpwu",
-  "dependencies": {
-    "ts-xutils": "https://github.com/xpwu/ts-xutils#semver:~0.2.0"
-  },
+	"type": "module",
+	"main": "./dist",
+	"types": "./dist",
+	"dependencies": {
+		"ts-x": "github:xpwu/ts-x#semver:^0.5.2"
+	},
   "devDependencies": {
-    "@types/jest": "28.1.3",
-    "jest": "28.1.1",
-    "ts-jest": "28.0.5",
-    "typescript": "4.7.4"
+		"@types/jest": "30.0.0",
+		"jest": "30.1.3",
+		"rimraf": "^6.0.1",
+		"ts-jest": "29.4.4"
   },
   "scripts": {
-    "tsc": "tsc",
-    "test": "jest"
+		"clean": "rimraf ./dist",
+		"tsc": "npm run clean && tsc",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "keywords": [
-    "ts",
-    "typescript",
     "concurrency",
-    "web"
+    "channel",
+		"mutex",
+		"semaphore"
   ],
   "license": "MIT",
   "files": [
     "src",
+		"dist",
     "index.ts"
   ],
+	"engines": {
+		"node": ">=24.8.0"
+	},
   "repository": {
     "type": "git",
     "url": "https://github.com/xpwu/ts-concurrency.git"
   },
-  "jest": {
-    "preset": "ts-jest",
-    "testRegex": "test/(.+)\\.test\\.(tsx?)$"
-  },
+
   "miniprogram": "."
 }

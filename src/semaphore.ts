@@ -1,5 +1,5 @@
 import {queue} from "./queue"
-import {assert} from "ts-xutils"
+import {assert} from "ts-x"
 
 
 export class Semaphore {
